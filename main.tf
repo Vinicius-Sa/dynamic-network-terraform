@@ -17,7 +17,11 @@ terraform {
   }
 }
 
-module "vpc" {
+################################################################################
+# VPC
+################################################################################
+
+/module "vpc" {
   source = "./modules/terraform-aws-modules/terraform-aws-vpc"
   name   = "${var.project}-${var.environment}"
   cidr   = "${lookup(var.cidr_block, var.environment)}.0.0/16"
