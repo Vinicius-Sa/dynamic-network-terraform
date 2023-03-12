@@ -23,7 +23,7 @@ variable "service_name" {
 variable "cidr_block"{
   type = map
   default = {
-    symptest            = "172.22"
+    prod                = "172.22"
     dev                 = "172.24"
   }
 }
